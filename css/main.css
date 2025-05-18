@@ -1,0 +1,717 @@
+@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Next:ital,wght@0,200..800;1,200..800&family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+
+:root {
+    --blanco: #F2F6F9;
+    --oscuro: #030E1B;
+    --gris: #4E4E4E;
+    --celeste: #4B90B1;
+    --violeta: #4A56E2;
+}
+
+
+/* GENERAL */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: "Atkinson Hyperlegible Next", sans-serif;
+    color: var(--oscuro);
+    font-size: 16px;
+}
+
+body{
+    background-color: var(--blanco);
+}
+
+.page{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 6% 0;
+}
+
+p{
+    line-height: 1.4rem;
+    margin-bottom: 1.8rem;
+}
+
+h1{
+    font-family: "Noto Serif", serif;
+    font-size: 10vw;
+    font-weight: 600;
+    letter-spacing: -0.05rem;
+    margin-bottom: 0.8rem;
+}
+
+h2{
+    font-family: "Noto Serif", serif;
+    font-size: 10vw;
+    font-weight: 600;
+    letter-spacing: -0.05rem;
+    margin-bottom: 0.9rem;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.8rem 1.8rem 0.8rem;
+    border: solid 1px var(--oscuro);
+    border-radius: 3rem;
+    background-color: transparent;
+    color: var(--oscuro);
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+.btn:hover {
+    color: var(--celeste);
+    border: solid 1px var(--celeste);
+    border-radius: 3rem;
+    box-shadow: 0 0 0.5rem var(--violeta);
+}
+
+.section{
+    margin-bottom: 10rem;
+}
+
+
+
+
+/* HEADER */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 1.5rem;
+}
+.header-logo img {
+    height: 1.3rem;
+}
+.header-nav{
+    display: none;
+}
+.toggle-nav{
+    opacity: 0;
+    visibility: hidden;
+
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    gap: 1rem;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--oscuro);
+    padding: 2rem 1.5rem 2rem 6rem;
+    box-shadow: 0 0 0 100vmax rgba(3, 14, 27, 0.5);
+}
+.toggle-nav.visible{
+    opacity: 1;
+    visibility: visible;
+}
+.nav-list{
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    gap: 1rem;
+}
+.nav-list a{
+    font-family:"Noto Serif", serif;
+    font-size: 1.3rem;
+    color: var(--blanco);
+}
+.abrir-menu, 
+.cerrar-menu{
+    border: 0;
+    background-color: transparent;
+}
+
+
+
+
+
+
+
+/* SECTION HERO*/
+.hero-top{
+    margin-bottom: 3rem;
+}
+.fondo{
+    aspect-ratio: 16 / 9;
+    width: 100%;
+    margin-bottom: 10rem;
+}
+.fondo img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+.textos{
+    margin-bottom: 2rem;
+}
+.texto-destacado{
+    font-size: 1.1rem;
+    font-weight: 500;
+    line-height: 1.4rem;
+    margin-bottom: 1.3rem;
+}
+.txt-color{
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: var(--violeta);
+}
+.foto-personal{
+    aspect-ratio: 4 / 3;
+    width: 100%;
+    margin-bottom: 2rem;
+}
+
+.foto-personal img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 0.8rem;
+}
+
+
+
+/* SECTION PROYECTOS RECIENTES*/
+.proyectos-textos{
+    margin-bottom: 3rem;
+}
+.proyecto-card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+.proyecto-card-img{
+    aspect-ratio: 4 / 3;
+    width: 100%;
+    margin-bottom: 0.8rem;
+    border-radius: 0.8rem;
+    border: solid 1px transparent;
+    transition: all 0.3s ease;
+}
+.proyecto-card-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 0.8rem;
+}
+.proyecto-card-img:hover{
+    color: var(--celeste);
+    border: solid 1px var(--celeste);
+    box-shadow: 0 0 0.5rem var(--violeta);
+    cursor: pointer;
+}
+.proyecto-nombre{
+    font-family: "Noto Serif", serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    letter-spacing: -0.05rem;
+    margin-bottom: 0.4rem;
+}
+.proyecto-tipo{
+    font-size: 0.86rem;
+    font-weight: 500;
+    color: var(--gris);
+}
+
+/* SECTION PROYECTOS TODOS*/
+.section-proyectos{
+    padding-top: 5rem;
+}
+
+
+/* SECTION PROYECTO AMPLIACION*/
+.section-proyecto-ampliacion{
+    padding-top: 2rem;
+}
+.proyecto-info, .proyecto-galeria{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 3rem;
+}
+.info-img, .galeria-img{
+    aspect-ratio: 4 / 3;
+    width: 100%;
+    margin-bottom: 1.5rem;
+}
+.galeria-img{
+    margin-bottom: 2rem;
+}
+.info-img img, .galeria-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 0.8rem;
+}
+.info-datos{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.info-datos p{
+    width: 40%;
+    line-height: 1.3rem;
+}
+.info-descripcion span, .info-fecha span{
+    line-height: 2rem;
+    font-size: 1.1rem;
+}
+.section-proyecto-siguiente{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.section-proyecto-siguiente h2{
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+
+
+/* SECTION CONTACTO */
+.section-contacto{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.section-contacto h2{
+    text-align: center;
+}
+.section-contacto p{
+    text-align: center;
+}
+.txt-negrita{
+    font-weight: 700;
+}
+
+
+/* FOOTER */
+footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 25vh;
+    border-top: solid 1px var(--gris);
+    padding: 0 5rem 0;
+}
+.redes{
+    display: flex;
+    justify-content: center;
+}
+.redes a{
+    padding: 0.6rem;
+    padding-bottom: 0.3rem;
+    transition: all 0.3s ease;
+}
+.redes a:hover{
+    border: solid 1px var(--celeste);
+    border-radius: 10rem;
+    box-shadow: 0 0 0.5rem var(--violeta);
+}
+.redes a img{
+    width: 2rem;
+    border-radius: 0.2rem;
+}
+.copyright{
+    margin: 0;
+    color: var(--gris);
+}
+
+
+
+
+
+
+
+
+
+/* BREAKPOINT TABLET **********************************/
+@media (min-width: 768px){
+    .abrir-menu, .toggle-nav{
+        display: none;
+    }
+    p{
+        font-size: 1.15rem;
+        line-height: 1.6rem;
+        margin-bottom: 2rem;
+    }
+    h1{
+        font-size: 3.5rem;
+        font-weight: 600;
+        margin-bottom: 2rem;
+    }
+    h2{
+        font-size: 3.5rem;
+        font-weight: 600;
+        margin-bottom: 2rem;
+    }
+    .btn {
+        font-size: 1.15rem;
+    }
+    .btn:hover {
+        font-size: 1.15rem;
+    }
+    .section{
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+
+
+
+
+    /* HEADER */
+    header {
+        padding: 1rem 2rem;
+        
+    }
+    .header-nav {
+        display: flex;
+        align-items: center;
+        gap: 2.5rem;
+    }
+    .menu {
+        display: flex;
+        gap: 2rem;
+        list-style: none;
+    }
+
+    .menu-link {
+        text-decoration: none;
+        color: var(--oscuro);
+        font-weight: 500;
+        transition: color 0.3s;
+    }
+    .menu-link:hover {
+        color: var(--celeste);
+    }
+    .menu a{
+        font-size: 1.15rem;
+    }
+
+
+
+    /* SECTION HERO */
+    .section-hero{
+        display: flex;
+        flex-direction: column;
+    }
+    .hero-top{
+        padding: 0 4rem 0;
+    }
+    .texto-destacado{
+        font-size: 1.5rem;
+        line-height: 2rem;
+    }
+    .txt-color{
+        font-size: 1.5rem;
+        line-height: 2rem;
+    }
+
+
+    /* SECTION PROYECTOS RECIENTES*/
+    .proyectos-textos{
+        margin-bottom: 4rem;
+    }
+    .proyecto-card-img{
+        margin-bottom: 1.2rem;
+    }
+    .proyecto-nombre{
+        font-size: 1.8rem;
+        font-weight: 600;
+        margin-bottom: 0.5rem;
+    }
+    .proyecto-tipo{
+        font-weight: 600;
+    }
+
+
+    /* SECTION PROYECTOS TODOS*/
+    .section-proyectos{
+        padding-top: 8rem;
+    }
+
+
+    /* SECTION SOBRE MI */
+    .section-sobremi{
+        padding-top: 8rem;
+    }
+
+
+    /* SECTION CONTACTO */
+    .section-contacto p{
+        width: 80%;
+    }
+
+
+    /* FOOTER */
+    footer{
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        padding: 0 3rem 0;
+    }
+}
+
+
+
+
+/* BREAKPOINT DESKTOP **********************************/
+@media (min-width: 1366px){
+    .page{
+         display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 0 3% 0;
+    }
+    p{
+        font-size: 15px;
+        line-height: 1.5rem;
+        margin-bottom: 2rem;
+    }
+    h1{
+        font-size: 4.5rem;
+        font-weight: 600;
+    }
+    h2{
+        font-size: 4.5rem;
+        font-weight: 600;
+        margin-bottom: 2rem;
+    }
+    .btn {
+        display: inline-flex;
+        align-items: center;
+        padding: 0.8rem 1.8rem 0.8rem;
+        border: solid 1px var(--oscuro);
+        border-radius: 3rem;
+        background-color: transparent;
+        color: var(--oscuro);
+        font-weight: 500;
+        font-size: 14px;
+        transition: all 0.3s ease;
+    }
+    .btn:hover {
+        color: var(--celeste);
+        border: solid 1px var(--celeste);
+        border-radius: 3rem;
+        font-size: 14px;
+        box-shadow: 0 0 0.5rem var(--violeta);
+    }
+
+
+    /* HEADER */
+    header {
+        margin-top: 0.5rem;
+    }
+    .menu a{
+        font-size: 14px;
+    }
+
+
+
+    /* SECTION HERO */
+    .section{
+        margin-right: 10rem;
+        margin-left: 10rem;
+    }
+
+    .section-hero{
+        display: flex;
+        flex-direction: column;   
+    }
+
+    .hero-top div{
+        width: 45%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .hero-bottom-presentacion{
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .foto-personal{
+        width: 48%;
+        height: 60vh
+    }
+    .textos{
+        width: 45%;
+        
+    }
+    .texto-destacado{
+        font-size: 1.2rem;
+        line-height: 1.8rem;
+    }
+    .txt-color{
+        font-size: 1.2rem;
+    }
+
+    /* SECTION PROYECTOS RECIENTES*/
+    .proyectos-textos{
+        display: flex;
+        justify-content: space-between;
+    }
+    .proyectos-textos h2{
+        justify-content: flex-start;
+    }
+    .proyectos-descripcion{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: flex-start;
+        width: 38%;
+    }
+    .proyectos-listado{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+    .proyecto-card{
+        padding: 0 1.2rem 0;
+        width: 50%;
+    }
+    .proyecto-card-img {
+        aspect-ratio: 4 / 3;
+        width: 100%;
+        margin-bottom: 1rem;
+        overflow: hidden;
+    }
+    .proyecto-card-img img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        border-radius: 0.8rem;
+    }
+
+    /* SECTION PROYECTO AMPLIACION*/
+    .section-proyecto-ampliacion{
+        padding-top: 3rem;
+    }
+    .proyecto-info{
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        margin-bottom: 3rem;
+    }
+    .info-img, .info-cuadro{
+        width: 45%;
+    }
+    .info-cuadro h1{
+        font-size: 3.5rem;
+    }
+    .section-proyecto-siguiente h2{
+        font-size: 3.5rem;
+    }
+
+    /* SECTION SOBRE MI */
+    .sobremi-presentacion{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+
+    /* SECTION CONTACTO */
+    .section-contacto h2{
+        font-size: 3.5rem;
+    }
+    .section-contacto p{
+        width: 60%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* TOGGLE MENU */
+/* .menu-icon {
+    position: absolute;
+    top: 1.25rem;
+    right: 1.25rem;
+    cursor: pointer;
+    z-index: 1000; 
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 2px;
+    margin: 4px 0;
+    background-color: var(--oscuro);
+    transition: 0.4s;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: var(--oscuro);
+    overflow: hidden;
+    transition: right 0.3s ease;
+}
+
+#menuOverlay .menu {
+    list-style: none;
+    margin: 0;
+    text-align: center;
+}
+
+
+#menuOverlay .menu li{
+    margin: 1rem 0;
+}
+
+#menuOverlay .menu a{
+    text-decoration: none;
+    color: var(--blanco);
+    display: block;
+}
+
+
+.overlay.open {
+    right: 0;
+}
+
+
+.menu-icon.open .bar1 {
+    transform: rotate(-45deg);
+    position: relative;
+    top: 10px;
+}
+.menu-icon.open .bar2 {
+    opacity: 0;
+}
+.menu-icon.open .bar3 {
+    transform: rotate(45deg);
+    position: relative;
+    top: -10px;
+} */
